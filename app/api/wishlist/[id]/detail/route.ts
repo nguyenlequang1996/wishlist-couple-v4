@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma/prisma";
 
+// Configure this route as dynamic
+export const dynamic = 'force-dynamic';
+
 // GET /api/wishlist/[id]/detail - Lấy chi tiết sản phẩm cùng thông tin chủ sở hữu
 export async function GET(
   request: Request,

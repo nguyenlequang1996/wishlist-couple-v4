@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma/prisma";
 import { hashPassword } from "@/lib/auth-utils";
 
+// Configure this route as dynamic
+export const dynamic = 'force-dynamic';
+
 // Chỉ sử dụng API này trong môi trường phát triển
 export async function GET(request: Request) {
   // Kiểm tra xem có phải môi trường phát triển không

@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma/prisma";
 
+// Ensure Vercel builds dynamic routes correctly
+export const dynamic = 'force-dynamic';
+
 // PUT /api/wishlist/[id] - Cập nhật wishlist item
 export async function PUT(
   request: Request,

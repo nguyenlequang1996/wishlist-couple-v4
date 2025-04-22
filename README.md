@@ -50,10 +50,7 @@ DIRECT_URL="postgresql://username:password@host:port/database"
 npx prisma db push
 ```
 
-5. Tạo dữ liệu mẫu (nếu cần):
-- Chạy ứng dụng và truy cập API endpoint `/api/seed`
-
-6. Chạy ứng dụng:
+5. Chạy ứng dụng:
 ```bash
 npm run dev
 # hoặc
@@ -61,6 +58,28 @@ yarn dev
 # hoặc
 pnpm dev
 ```
+
+## Deploy lên Vercel
+
+1. Đảm bảo bạn đã cấu hình đúng các biến môi trường trong Vercel:
+   - `DATABASE_URL`: Connection string đến Postgres database
+   - `DIRECT_URL`: Connection string giống như DATABASE_URL
+
+2. Nếu gặp phải lỗi "Cannot find module '.prisma/client/default'", hãy thử các giải pháp sau:
+   - Thêm `postinstall` script vào package.json: `"postinstall": "prisma generate"`
+   - Thêm `prisma generate` vào script build: `"build": "prisma generate && next build"`
+   - Tạo file `.npmrc` với nội dung:
+     ```
+     node-linker=hoisted
+     public-hoist-pattern[]=*prisma*
+     public-hoist-pattern[]=*@prisma/client*
+     ```
+
+3. Nếu vẫn gặp vấn đề, hãy thử xóa folder `.next` và `node_modules` rồi cài đặt lại:
+   ```bash
+   rm -rf .next node_modules
+   npm install
+   ```
 
 ## Đóng góp
 

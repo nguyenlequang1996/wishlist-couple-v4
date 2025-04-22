@@ -33,11 +33,6 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl font-bold text-[var(--primary-dark)]">
                   Danh sách mong muốn cho cặp đôi
                 </h2>
-                <img
-                  src="/images/heart-doodle.png"
-                  alt="Heart doodle"
-                  className="absolute -top-10 -right-16 w-24 h-24 opacity-70 floating"
-                />
               </div>
               <p className="mx-auto max-w-[700px] text-lg text-gray-600">
                 Chia sẻ những món đồ bạn muốn mua với người yêu của mình. Dễ dàng quản lý và theo dõi danh sách mong
@@ -50,24 +45,6 @@ export default function Home() {
                     <span className="ml-2">✨</span>
                   </button>
                 </Link>
-              </div>
-              <div className="relative mt-12">
-                <img
-                  src="/images/couple-wishlist.png"
-                  alt="Couple Wishlist Preview"
-                  className="mx-auto rounded-2xl shadow-2xl max-w-full md:max-w-3xl bounce-in"
-                />
-                <img
-                  src="/images/star-sparkle.png"
-                  alt="Sparkle"
-                  className="absolute -top-10 -left-10 w-20 h-20 floating"
-                />
-                <img
-                  src="/images/star-sparkle.png"
-                  alt="Sparkle"
-                  className="absolute -bottom-5 -right-5 w-16 h-16 floating"
-                  style={{ animationDelay: "1s" }}
-                />
               </div>
             </div>
           </div>
