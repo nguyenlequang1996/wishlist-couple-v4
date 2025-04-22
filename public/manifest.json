@@ -1,0 +1,22 @@
+{
+  "name": "Wishlist Couple App",
+  "short_name": "Wishlist",
+  "description": "Ứng dụng quản lý danh sách mong muốn cho cặp đôi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/placeholder-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/placeholder-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
